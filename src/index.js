@@ -112,7 +112,7 @@ export default class RNPickerSelect extends PureComponent {
 
     constructor(props) {
         super(props);
-
+        this.pickerRef = React.createRef()
         const items = RNPickerSelect.handlePlaceholder({
             placeholder: props.placeholder,
         }).concat(props.items);
@@ -499,6 +499,7 @@ export default class RNPickerSelect extends PureComponent {
                         onValueChange={this.onValueChange}
                         selectedValue={selectedItem.value}
                         {...pickerProps}
+                        ref={this.pickerRef}
                     >
                         {this.renderPickerItems()}
                     </Picker>
@@ -524,6 +525,7 @@ export default class RNPickerSelect extends PureComponent {
                     onValueChange={this.onValueChange}
                     selectedValue={selectedItem.value}
                     {...pickerProps}
+                    ref={this.pickerRef}
                 >
                     {this.renderPickerItems()}
                 </Picker>
