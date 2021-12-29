@@ -456,6 +456,7 @@ export default class RNPickerSelect extends PureComponent {
                             testID="ios_picker"
                             onValueChange={this.onValueChange}
                             selectedValue={selectedItem.value}
+                            ref={this.pickerRef}
                             {...pickerProps}
                         >
                             {this.renderPickerItems()}
@@ -546,6 +547,7 @@ export default class RNPickerSelect extends PureComponent {
                     enabled={!disabled}
                     onValueChange={this.onValueChange}
                     selectedValue={selectedItem.value}
+                    ref={this.pickerRef}
                     {...pickerProps}
                 >
                     {this.renderPickerItems()}
